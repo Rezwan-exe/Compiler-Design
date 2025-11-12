@@ -1,0 +1,8 @@
+myVariable
+_count
+123_invalid
+if y
+isValid2
+$symbol
+h j
+128

@@ -3,7 +3,7 @@
 using namespace std;
 
 // Function to check numeric constant
-string isNumericConstant(const string& input) {
+string isNumericConstant(string input) {
     for (char c : input) {
         if (c < '0' || c > '9') {
             return "Not a numeric constant";
@@ -18,21 +18,22 @@ bool isOperator(char ch) {
 }
 
 // Function to check single-line comment
-bool isSingleLineComment(const string& line) {
+bool isSingleLineComment(string line) {
     return line.find("//") == 0;
 }
 
 // Function to check multi-line comment
-bool isMultiLineComment(const string& line) {
+bool isMultiLineComment(string line) {
     return line.find("/*") == 0 && line.rfind("*/") == line.size() - 2;
 }
 
 // Function to check identifier
-bool isIdentifier(const string& input) {
+bool isIdentifier(string input) {
     if (input.empty()) return false;
     if (!((input[0] >= 'A' && input[0] <= 'Z') ||
           (input[0] >= 'a' && input[0] <= 'z') ||
-          input[0] == '_')) return false;
+          input[0] == '_')) 
+return false;
 
     for (size_t i = 1; i < input.length(); i++) {
         if (!((input[i] >= 'A' && input[i] <= 'Z') ||
