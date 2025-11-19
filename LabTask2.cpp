@@ -47,7 +47,8 @@ int main() {
     while (getline(inputFile, line)) {
         if (identification(line)) {
             cout << "[" << line << "] - VALID Identifier" << endl;
-        } else {
+        }
+        else {
             cout << "[" << line << "] - INVALID Identifier" << endl;
         }
     }
